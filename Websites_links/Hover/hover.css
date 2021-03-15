@@ -1,0 +1,36 @@
+.item {
+    background-color: rgba(111,41,97,.3);
+    border: 0.2rem solid rgb(111,41,97);
+    border-radius: .5em;
+    margin: 0.4rem 0.75rem 0.4rem 0.75rem;
+    padding: 0.4rem;
+    width: 17%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.20em;
+    box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);
+    transition:.2s all; 
+}
+.img {
+    width: 100%;
+}
+.flex-container {
+    display: flex;
+    /* align-items:center; */
+    justify-content:center;
+    /* border: 0.3rem solid rgb(111,41,97); */
+    border-radius: .5em;
+    width:98%;
+}
+.flex-container:hover .item{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+}
+.flex-container:hover .item:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+}

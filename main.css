@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron&family=Righteous&family=Press+Start+2P&display=swap');
+*, *::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #3a4445;
+    color: #b89e6c;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Righteous';
+    font-size: 100%;
+}
+/*  Start header */
+header {
+    display: flex;
+    position: fixed;
+    background-color: #333b3b;
+    width: 100%;
+}
+.header-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo-container {
+    width: 15%;
+}
+.logo {
+    width: 100%;
+}
+.nav-bar {
+    width: 70%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-bar a {
+    position: relative;
+    /* margin: 2rem; */
+    color: #b89e6c;
+    font-size: 2.2vw;
+    text-decoration: none;
+}
+/*      Start animation above the links */
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%) scaleX(0);
+            transform: translateX(-50%) scaleX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #b89e6c;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
+}
+.links:hover::after {
+    -webkit-transform: translateX(-50%) scaleX(1);
+            transform: translateX(-50%) scaleX(1);
+}
+/*      End animation */
+/*  End header */
+
+/*  Start 1st section */
+.about-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Monoton'; */
+}
+.me {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Monoton';
+}
+h1 {
+    font-size: 5vw;
+}
+h2 {
+    font-size: 3.5vw;
+}
+.infos {
+    font-family: 'Righteous';
+}
+/*  End 1st section */
+
+/*  Start 2nd section */
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-container {
+    flex-basis: 50%;
+    text-align: center;
+    /* margin-top: 3rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-container:hover {
+    background-color: #333b3b;
+}
+.item {
+    width: 50%;
+}
+.project-title{
+    font-size: 2vw;
+}
+.img-item {
+    width: 100%;
+}
+.item a {
+    text-decoration: none;
+    color: #b89e6c;
+}
+/*  End 2nd section */
+
+/*  Start footer */
+footer {
+    background-color: #333b3b;
+    flex-basis: 100%;
+}
+.nav-list2 {
+    display: flex;
+    padding: 2rem;
+}
+.icon-container {
+    flex-basis: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon-social {
+    width: 100%;
+}
+.git-link {
+    font-family: 'Press Start 2P', cursive;
+}
+.cv-container {
+    display: flex;
+    justify-content: center;
+}
+.cv-container a {
+    text-decoration: none;
+    color: #b89e6c;
+    margin-right: 2.5rem;
+}
+.cv-container p:hover {
+    color: #333b3b;
+    background-color: #b89e6c;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+}
+.cv-p {
+    font-size: 2vw;
+}
+/*  End footer */
+
+@media screen and (max-width: 700px) {
+    .item-container {
+        flex-basis: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ul-header li a {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .project-title {
+        font-size: 1.2rem;
+    }
+    .logo-container {
+        margin-top: 0.5rem;
+        width: 25%;
+    }
+    .item-container {
+        flex-basis: 100%;
+    }
+    .git-link {
+        font-size: 0.7rem;
+    }
+}
